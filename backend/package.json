@@ -1,0 +1,26 @@
+{
+  "name": "study-planner-backend",
+  "version": "1.0.0",
+  "description": "AI Study Planner Backend (Groq LLaMA3)",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "axios": "^1.13.5",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^4.22.2",
+    "groq-sdk": "^0.37.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongodb": "^7.2.0",
+    "mongoose": "^9.6.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
