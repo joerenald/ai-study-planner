@@ -160,7 +160,7 @@ const Generating = () => {
 
           await axios.post(
 
-            "http://localhost:5000/api/planner/save",
+            "https://ai-study-planner-backend-jr7f.onrender.com/api/planner/save",
 
             finalPlan
           );

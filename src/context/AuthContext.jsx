@@ -62,7 +62,7 @@ export const AuthProvider = ({
 
       const res =
         await axios.post(
-          "http://localhost:5000/api/auth/login",
+          "https://ai-study-planner-backend-jr7f.onrender.com/api/auth/login",
           {
             email,
             password,
@@ -104,7 +104,7 @@ export const AuthProvider = ({
     try {
 
       await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://ai-study-planner-backend-jr7f.onrender.com/api/auth/register",
         {
           name,
           email,

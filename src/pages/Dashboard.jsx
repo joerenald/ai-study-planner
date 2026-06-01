@@ -29,7 +29,7 @@ const Dashboard = () => {
       const response =
         await axios.put(
 
-          `http://localhost:5000/api/planner/task/${plannerData._id}/${index}`
+          `https://ai-study-planner-backend-jr7f.onrender.com/api/planner/task/${plannerData._id}/${index}`
 
         );
 
@@ -52,7 +52,7 @@ const Dashboard = () => {
     const res =
       await axios.post(
 
-        "http://localhost:5000/api/ai/chat",
+        "https://ai-study-planner-backend-jr7f.onrender.com/api/ai/chat",
 
         {
           message:

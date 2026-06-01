@@ -85,7 +85,7 @@ export const PlannerProvider = ({
           const res =
             await axios.get(
 
-              `http://localhost:5000/api/planner/${user.uid}`
+              `https://ai-study-planner-backend-jr7f.onrender.com/api/planner/${user.uid}`
             );
 
           if (
@@ -139,7 +139,7 @@ export const PlannerProvider = ({
         const res =
           await axios.post(
 
-            "http://localhost:5000/api/generate-plan",
+            "https://ai-study-planner-backend-jr7f.onrender.com/api/generate-plan",
 
             {
 

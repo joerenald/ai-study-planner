@@ -79,7 +79,7 @@ const navigate = useNavigate();
 
         const res =
           await axios.get(
-            `http://localhost:5000/api/planner/user/${user.uid}`
+            `https://ai-study-planner-backend-jr7f.onrender.com/api/planner/user/${user.uid}`
           );
 
         setPlans(
@@ -106,7 +106,7 @@ const navigate = useNavigate();
       try {
 
         await axios.delete(
-          `http://localhost:5000/api/planner/delete/${id}`
+          `https://ai-study-planner-backend-jr7f.onrender.com/api/planner/delete/${id}`
         );
 
         setPlans(

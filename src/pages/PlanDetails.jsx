@@ -46,7 +46,7 @@ const [date, setDate] =
 
         const res =
           await axios.get(
-            `http://localhost:5000/api/planner/plan/${id}`
+            `https://ai-study-planner-backend-jr7f.onrender.com/api/planner/plan/${id}`
           );
 
         setPlan(
@@ -70,7 +70,7 @@ const toggleTask =
       const res =
         await axios.put(
 
-          `http://localhost:5000/api/planner/task/${id}/${index}`
+          `https://ai-study-planner-backend-jr7f.onrender.com/api/planner/task/${id}/${index}`
         );
 
       setPlan(
