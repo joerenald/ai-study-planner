@@ -25,6 +25,7 @@ app.use(
   cors({
     origin:
       "http://localhost:5173",
+      "https://ai-study-planner-ilwe.vercel.app",
     credentials: true,
   })
 );
