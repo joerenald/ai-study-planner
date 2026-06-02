@@ -1,16 +1,13 @@
-// backend/server.js
-import aiRoutes
-from "./routes/aiRoutes.js";
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+
 import connectDB from "./config/db.js";
+
+import aiRoutes from "./routes/aiRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
-import plannerRoutes
-from "./routes/plannerRoutes.js";
-// ==========================================
-// LOAD ENV
-// ==========================================
+import plannerRoutes from "./routes/plannerRoutes.js";
+
 dotenv.config();
 connectDB();
 
@@ -18,26 +15,21 @@ const app = express();
 
 const PORT = process.env.PORT || 5000;
 
-// ==========================================
-// MIDDLEWARE
-// ==========================================
+// Middleware
+app.use(express.json());
+
 app.use(
   cors({
-    origin:
+    origin: [
       "http://localhost:5173",
       "https://ai-study-planner-ilwe.vercel.app",
+    ],
     credentials: true,
   })
 );
-app.use(
-  "/api/ai",
-  aiRoutes
-);
-app.use(express.json());
-app.use(
-  "/api/planner",
-  plannerRoutes
-);
+
+app.use("/api/ai", aiRoutes);
+app.use("/api/planner", plannerRoutes);
 app.use("/api/auth", authRoutes);
 // ==========================================
 // HELPER FUNCTIONS
